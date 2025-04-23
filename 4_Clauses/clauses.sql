@@ -29,3 +29,8 @@ SELECT * FROM student WHERE marks>=80 LIMIT 3;
 -- order by clause:
 SELECT * FROM student ORDER BY city ASC; 
 SELECT * FROM student ORDER BY marks DESC LIMIT 3;
+
+-- group by clause:
+SELECT city FROM student GROUP BY city;
+SELECT grade, max(marks) FROM student GROUP BY grade;
+SELECT city, avg(marks) FROM student GROUP BY city ORDER BY avg(marks) ASC;
