@@ -35,4 +35,24 @@ UPDATE student SET grade="A" WHERE marks BETWEEN 90 AND 100;
 -- Delete command :
 DELETE FROM student WHERE marks<80; 
 
-SELECT * FROM student;
+-- alter command :
+ALTER TABLE student
+ADD COLUMN age INT DEFAULT 20;
+
+ALTER TABLE student
+DROP COLUMN age;
+
+ALTER TABLE student
+RENAME TO student1;
+
+ALTER TABLE student1
+CHANGE COLUMN grade grades VARCHAR(1); 
+
+ALTER TABLE student1
+MODIFY COLUMN grades VARCHAR(50);
+
+-- truncate command :
+TRUNCATE TABLE student1;
+
+
+SELECT * FROM student1;
