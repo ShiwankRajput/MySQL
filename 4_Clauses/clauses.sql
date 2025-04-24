@@ -34,3 +34,8 @@ SELECT * FROM student ORDER BY marks DESC LIMIT 3;
 SELECT city FROM student GROUP BY city;
 SELECT grade, max(marks) FROM student GROUP BY grade;
 SELECT city, avg(marks) FROM student GROUP BY city ORDER BY avg(marks) ASC;
+
+-- having clause : 
+SELECT city FROM student GROUP BY city HAVING max(marks)>90;
+
+SELECT city FROM student WHERE grade="A" GROUP BY city HAVING max(marks)>93 ORDER BY city ASC;

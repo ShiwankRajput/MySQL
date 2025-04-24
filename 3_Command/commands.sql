@@ -19,6 +19,20 @@ VALUES
 (105,"emanuel",12,"F","Delhi"),
 (106,"farah",82,"B","Delhi");
 
+-- setting off to safe mode
+SET SQL_SAFE_UPDATES = 0;
+
+-- select command : 
 SELECT * FROM student;
 SELECT roll_no, name FROM student;
 SELECT DISTINCT city FROM student;
+
+-- update command :
+UPDATE student SET grade="O" WHERE grade="A";  -- O : outstanding
+UPDATE student SET marks=94 WHERE roll_no=105;
+UPDATE student SET grade="A" WHERE marks BETWEEN 90 AND 100;
+
+-- Delete command :
+DELETE FROM student WHERE marks<80; 
+
+SELECT * FROM student;
